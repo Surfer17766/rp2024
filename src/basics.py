@@ -32,9 +32,14 @@ print(home_pose)
 relative_pose = Affine(translation=[0, 0, 0.1])
 # apply the relative pose to the current end effector pose (in the eef frame)
 # the multiplication of two Affine objects behaves the same way as the multiplication of two homogeneous transformation matrices
+
+time.sleep(10)
+
 target_pose = home_pose * relative_pose
 # move to the target pose
 robot.ptp(target_pose)
+
+time.sleep(10)
 
 # per default, the z axis of the eef frame is pointing downwards
 # applying the same relative transformation to the target pose in the base frame
