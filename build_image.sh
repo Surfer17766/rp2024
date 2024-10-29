@@ -4,6 +4,8 @@
 ##############################################################################
 RENDER=nvidia
 
+#just to test
+
 uid=$(eval "id -u")
 gid=$(eval "id -g")
 docker build \
